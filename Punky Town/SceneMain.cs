@@ -9,5 +9,10 @@ namespace PunkyTown
 {
     class SceneMain : Scene
     {
+        public SceneMain(PositronGame game):
+            base(game, "Main")
+        {
+
+        }
     }
 }
