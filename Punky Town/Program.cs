@@ -15,11 +15,17 @@ namespace PunkyTown
             // Instantiate the main window
             // this also sets up OpenGL
             var main_window = new ThreadedRendering();
+
             // Prepare game resources
             // This makes OpenGL calls
             PositronGame.InitialSetup();
+
             // TEST: Dump all the settings:
             //Configuration.DumpEverything ();
+
+            var game = main_window.Game = new PositronGame(main_window);
+            game.CurrentScene = new SceneMain(game);
+
             // Run the window thread
             // Game will be set up by render/update thread -because reasons-
             main_window.Run();
