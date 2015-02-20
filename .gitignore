@@ -194,3 +194,9 @@ FakesAssemblies/
 
 # Visual Studio 6 workspace options file
 *.opt
+
+# Merge backup files
+*.orig
+
+# Sandbox for misc stuff that shouldn't be tracked
+/Sandbox
