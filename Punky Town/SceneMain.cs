@@ -25,8 +25,8 @@ namespace PunkyTown
             var c5 = new SpinnyCircle(c4, 1, 0, 20, 0.006f) { Color = Color.Salmon, };
             //c5.mTransform.AddChild(scene.Camera.mTransform);
             //scene.Camera.mTransform.PositionLocalZ = 0;
-            scene.Camera.mTransform.PositionLocalY = 3f;
-            scene.Camera.mTransform.PositionLocalX = 3f;
+            //scene.Camera.mTransform.PositionLocalY = 3f;
+            //scene.Camera.mTransform.PositionLocalX = 3f;
             scene.Camera.mTransform.PositionLocalZ = 5;
             return scene;
         }
