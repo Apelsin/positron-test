@@ -1,0 +1,20 @@
+{
+    "ElementId": "Positron.SpriteBase+Animation#31038138",
+    "Frames": [
+        {
+            "ElementId": "Positron.SpriteBase+Frame#64604114",
+            "Color": {
+                "knownColor": 164,
+                "name": null,
+                "state": 1,
+                "value": 0
+            },
+            "Duration": 0,
+            "TexturePath": "..\\..\\..\\Assets\\Artwork\\sprite_null.png",
+            "TextureRegionIndex": 0
+        }
+    ],
+    "Looping": true,
+    "Name": null,
+    "PingPong": false
+}

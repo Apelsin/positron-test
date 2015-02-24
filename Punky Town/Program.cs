@@ -64,10 +64,12 @@ namespace PunkyTown
             #region Load Scene Data
             SceneConfigurator scene_config = new SceneConfigurator(new Type[]{
                 typeof(SpinnyCircle),
+                typeof(SpinnyCamera),
             });
             Scene main_scene;
             try
             {
+                throw new System.IO.FileNotFoundException("Test!");
                 using (var scene_stream = new System.IO.FileStream("CurrentScene.config", System.IO.FileMode.Open))
                     main_scene = scene_config.Load(scene_stream, game);
             }
@@ -96,15 +98,16 @@ namespace PunkyTown
             {
                 #region Store Scene Data
                 // Store the current scene
-                try
-                {
+                //try
+                //{
                     using (var global_config_stream = new System.IO.FileStream("CurrentScene.config", System.IO.FileMode.Create))
                         scene_config.Store(global_config_stream, game.CurrentScene);
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("Unable to write scene data.\n" + ex);
-                }
+                    SpriteBase.Animation.Store(game);
+                //}
+                //catch (Exception ex)
+                //{
+                //    Console.WriteLine("Unable to write scene data.\n" + ex);
+                //}
                 #endregion
                 #region Store Game Configuration
                 // Store the game configuration file
